@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62,5%;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    z-index: 2000;
+    background-color: #f1d8c6;
+    position: sticky;
+    top: 0%;
+    height: 7rem;
+}
+
+.menu{
+    position: relative;
+    left: 50rem;
+    bottom: 5rem;
+}
+.menu li {
+    display: inline-block;
+    padding: 0.8rem;
+}
+.menu a{
+    color: #7b3c30;
+    text-decoration: none;
+    font-weight: 800;
+}
+.logo{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+H1{
+    color: #7b3c30;
+    text-align: center;
+    margin: 2rem;
+    font-size: xxx-large;
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu.abajo{
+    left: 0.4rem;
+    bottom: 0rem;
+}
+
+footer{
+    background-color: #f1d8c6;
+    height: 7rem;
+    text-align: center;
+    bottom: 0rem;
+}
+.redesFooter a{
+    display: inline-block;
+    color: #7b3c30;
+    padding: 0rem 1rem;
+    padding-top: 1rem;
+}
+
+
+
+.nosotrosParrafo{
+    text-align: justify;
+    margin: 0rem 2rem;
+    width: 40rem;
+    position: absolute;
+    left: 37rem;
+}
+
+.nosotrosImagen{
+    width: 35rem;
+
+}
+.nosotrosTextoImagen{
+    display: inline-block;
+    position: relative;
+    margin: 0rem 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/* --------formuario pagina conatcto---------- */
+label{
+    display: block;
+    color: #7b3c30;
+    float: center;
+}
+
+.contactoForm{
+    width: 47rem;
+    height: auto;
+    margin: 4rem auto;
+    padding: 1rem;
+}
+input{
+    width: 46rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #7b3c30;
+    border-width: 0.1rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding-left: 1rem;
+
+}
+textarea{
+    width: 46rem;
+    height: 10rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #7b3c30;
+    border-width: 0.1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 1rem 0rem 1rem 0rem;
+}
+button{
+    background-color: #7b3c30;
+    width: 5.7rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #7b3c30;
+    text-transform: uppercase;
+    margin: auto;
+
+}
+button p{
+    color: #fff;
+}
+.contButtonForm{
+    width: 11.7rem;
+    margin: 0 auto;
+    /* centrando los 2 botones */
+}
+/* ---------fin formulario pagina de contacto---- */
+
+
+/* ------ inicio pagina pregintas frecuentes ------ */
+.contenedorFaq{
+    width: 82rem;
+    margin: 0rem auto;
+}
+.faqParrafo{
+    text-align: justify;
+    display: inline-block;
+    width: 40rem;
+    height: auto;
+    padding: 2rem;
+}
+.faqImg{
+    padding: 2rem;
+    display: inline-block;
+    width: 32rem;
+
+}
+.faqImg img{
+    display: inline-block;
+    width: 100%;
+}
+/* ------ fin pagina preguntas frecuentes ------ */
+
+/* ------ pagina productos ------ */
+.card img{
+    width: 15rem;
+}
+.card{
+    width: 15rem;
+    display: inline-block;
+    text-align: center;
+    margin: 2rem;
+}
+
+
+.nombreProducto{
+    margin: 0.5rem;
+    color: #7b3c30;
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+
+}
+.precioProducto{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #7b3c30;
+
+}
+.contenedorCards{
+    width: 77rem;
+    margin: 0rem auto;
+    /* centrando productos */
+}
+/* ------ fin pagina productos ------ */
+
+h3{
+    color: #7b3c30;
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+}
+
+.newsletter{
+    text-align: center;
+    width: 47.2rem;
+    margin: 3rem auto;
+}
+.whatsapp{
+    z-index: 1000;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+.whatsapp img{
+    width: 3rem;
+    height: 3rem;
+}
+

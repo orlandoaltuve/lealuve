@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62,5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ---inicio estilos header--- */
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1d8c6;
+    align-items: flex-start;
+    position: sticky;
+    top: 0%;
+}
+.logo{
+    width: 5rem;
+    height: 5rem;
+    margin-top: 1rem; 
+}
+.contenedorLogo{
+align-self: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #7b3c30;  
+    font-weight: 800;
+    font-size: 0.7rem;
+}
+.menu li{
+    list-style-type: none;
+}
+.menu{
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h1{
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;  
+    color: #7b3c30;
+}
+h3{
+    font-size: 0.8rem;
+    color: #7b3c30;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ---fin estilos header */
+
+
+/* --- inicio estilos card--- */
+.card{
+    margin-top:  1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombreProducto{
+    margin: 0.5rem;
+    text-transform: uppercase;
+    color: #7b3c30;
+}
+.precioProducto{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #7b3c30;
+}
+.card img{
+    width: 15rem;
+}
+
+button{
+    background-color: #7b3c30;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #7b3c30;
+    text-transform: uppercase;
+}
+button p{
+    font-size: 0.7rem;
+    color: white;
+}
+/* ---fin estilos card--- */
+
+.whatsapp{
+    z-index: 1000;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+.whatsapp img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;  
+}
+
+input{
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #7b3c30;
+    border-width: 0.1rem;
+    margin: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+/* ---- inicio estilos footer--- */
+
+.footer{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: #f1d8c6;
+    padding-top: 0.5rem;
+}
+footer p{
+    font-size: 0.5rem;
+}.abajo{
+    align-self: flex-start;
+}
+.redesFooter a{
+    text-decoration: none;
+    color: #7b3c30;
+    margin: 0.5rem;
+}
+/* --- fin estilos footer--- */
+
+@media screen and (min-width:768px){
+    .body{
+        display: grid;
+        grid-template-columns: repeat(3 1fr);
+        grid-template-rows: repeat(3 1fr);
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        
+
+    }
+    .header{
+        height: 6rem;
+        flex-direction: row;
+        background-color: #f1d8c6;
+        grid-area: header;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu li{
+        padding: 1rem;
+    }
+    .logo{
+        margin-top: 0rem;
+        margin-left: 1rem;
+    }
+
+    .main{ 
+        /* flex-flow: row wrap; */
+         grid-area: main;
+    }
+
+    .contenedorCards{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+
+    .footer{
+        grid-area: footer;
+    }
+    .abajo{
+        display: flex;
+        flex-direction: row;
+    }
+    .card{
+        margin: 1rem 0.5rem;
+    }
+}
