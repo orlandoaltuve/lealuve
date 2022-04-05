@@ -12,14 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estiloResponsive.css">
     <link rel="shortcut icon" href="../multimedia/Lealuve ico.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/091ce6828c.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
-        <a href="../index.html"><img src="../multimedia/logo.png" alt="Logo" class="logo"></a>
+<body class="body">
+    <header class="header">
+        <div class="contenedorLogo">
+            <a href="../index.html"><img src="../multimedia/logo.png" alt="Logo" class="logo"></a>
+        </div>
         <nav class="menu">
             <ul>
                 <li> <a href="../index.html">Inicio</a></li>
@@ -30,39 +32,46 @@
             </ul>
         </nav>
     </header>
-   
-    <h1>Contacto</h1>
 
-    <div class="contactoForm">
-        <form>
+    <main class="main">
+        <h1>Contacto</h1>
 
-            <label for="nombre">Nombre *</label>
-            <input type="text" placeholder="Ingrese su nombre" name="nombre">
-            <label for="email">Email *</label>
-            <input type="email" placeholder="Ingrese su email" name="email">
-            <label for="telefono">Telefono *</label>
-            <input type="text" placeholder="Ingrese su numero de teléfono" name="telefono">
-            <label for="mensaje">Mensaje *</label>
-            <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Deje aquí su comentario"></textarea>
-            <div class="contButtonForm">
-                <button type="submit">
-                    <p>Enviar</p>
-                </button>
-                <button type="reset">
-                    <p>Eliminar</p>
-                </button>
-            </div>
-            <p>* los campos son obligatorios</p>
+        <div class="contenedorFormulario">
+            <form class="formulario">
 
-        </form>
-    </div>
+                <label for="nombre"></label>
+                <input type="text" placeholder="Nombre" name="nombre" required>
+                <label for="email"></label>
+                <input type="email" placeholder="Email" name="email" required>
+                <label for="telefono"></label>
+                <input type="text" placeholder="Teléfono" name="telefono" required>
+                <label for="mensaje"></label>
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Deje aquí su comentario"
+                    required></textarea>
+                <div class="contButtonForm">
+                    <button type="submit">
+                        <p>Enviar</p>
+                    </button>
+                    <button type="reset">
+                        <p>Eliminar</p>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+        <iframe class="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.146787217545!2d-58.41143943519621!3d-34.57515221349328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57a4147c5c7%3A0xfc930bf72fdf871f!2zSmFyZMOtbiBKYXBvbsOpcw!5e0!3m2!1ses!2sar!4v1648865082078!5m2!1ses!2sar"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </main>
 
     <div class="whatsapp">
         <a href="https://wa.me/5491125470160" target="_blank"><img src="../multimedia/whatsapp.png" alt="whatsapp"></a>
     </div>
 
 
-    <footer>
+    <footer class="footer">
         <div class="redesFooter">
             <a href="https://www.facebook.com/lealuve.ar" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/lealuve_shop/" target="_blank"><i class="fa-brands fa-instagram"></i></a>

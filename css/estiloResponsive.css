@@ -1,15 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-html{
-    font-size: 62,5%;
+
+html {
+    font-size: 62, 5%;
     font-family: 'Montserrat', sans-serif;
 }
 
-
 /* ---inicio estilos header--- */
-.header{
+.header {
     display: flex;
     flex-direction: column;
     background-color: #f1d8c6;
@@ -17,73 +17,83 @@ html{
     position: sticky;
     top: 0%;
 }
-.logo{
+
+.logo {
     width: 5rem;
     height: 5rem;
-    margin-top: 1rem; 
-}
-.contenedorLogo{
-align-self: center;
+    margin-top: 1rem;
 }
 
-.menu a{
+.contenedorLogo {
+    align-self: center;
+}
+
+.menu a {
     text-decoration: none;
-    color: #7b3c30;  
+    color: #7b3c30;
     font-weight: 800;
     font-size: 0.7rem;
 }
-.menu li{
+
+.menu li {
     list-style-type: none;
 }
-.menu{
+
+.menu {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-h1{
-    margin-top: 1rem;
-    margin-bottom: 1rem; 
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.7rem;  
+    font-size: 1.7rem;
     color: #7b3c30;
 }
-h3{
+
+h3 {
+    margin-top: 1rem;
+    text-transform: uppercase;
     font-size: 0.8rem;
     color: #7b3c30;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /* ---fin estilos header */
 
 
 /* --- inicio estilos card--- */
-.card{
-    margin-top:  1.5rem;
+.card {
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.nombreProducto{
+.nombreProducto {
     margin: 0.5rem;
     text-transform: uppercase;
     color: #7b3c30;
 }
-.precioProducto{
+
+.precioProducto {
     margin-bottom: 0.5rem;
     font-weight: bold;
     color: #7b3c30;
 }
-.card img{
+
+.card img {
     width: 15rem;
 }
 
-button{
+button {
     background-color: #7b3c30;
     width: 5rem;
     height: 2rem;
@@ -91,33 +101,54 @@ button{
     border-style: solid;
     border-color: #7b3c30;
     text-transform: uppercase;
-}
-button p{
-    font-size: 0.7rem;
     color: white;
 }
+
+button:hover {
+    background-color: white;
+    color: #7b3c30;
+}
+
 /* ---fin estilos card--- */
 
-.whatsapp{
+/* ---  inicio preguntas frecuentes --- */
+.contenedorImagen img {
+    display: none;
+}
+
+.contenedorImagenTexto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+/* --- fin preguntas frecuentes--- */
+
+.whatsapp {
     z-index: 1000;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
 }
-.whatsapp img{
+
+.whatsapp img {
     width: 2rem;
     height: 2rem;
 }
 
-.newsletter{
+.newsletter {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;  
+    margin: 3rem 0rem;
 }
 
-input{
-    width: 10rem;
+/* --- inicio formulario--- */
+input {
+    width: 15rem;
     height: 1.5rem;
     border-radius: 1rem;
     border-style: solid;
@@ -127,41 +158,72 @@ input{
     padding-left: 0.5rem;
 }
 
+textarea {
+    width: 15rem;
+    height: 10rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #7b3c30;
+    border-width: 0.1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- fin formulario--- */
+
+
 /* ---- inicio estilos footer--- */
 
-.footer{
+.footer {
     margin-top: 1rem;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     background-color: #f1d8c6;
     padding-top: 0.5rem;
+    width: 100%;
 }
-footer p{
+
+.footer p {
     font-size: 0.5rem;
-}.abajo{
+}
+
+.abajo {
     align-self: flex-start;
 }
-.redesFooter a{
+
+.redesFooter a {
     text-decoration: none;
     color: #7b3c30;
     margin: 0.5rem;
 }
+
 /* --- fin estilos footer--- */
 
-@media screen and (min-width:768px){
-    .body{
+.mapa {
+    margin: 2rem 0rem;
+    width: 15rem;
+}
+
+@media screen and (min-width:768px) {
+    .body {
         display: grid;
         grid-template-columns: repeat(3 1fr);
         grid-template-rows: repeat(3 1fr);
-        grid-template-areas: 
-        "header header header"
-        "main main main"
-        "footer footer footer";
-        
-
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
     }
-    .header{
+
+    .header {
         height: 6rem;
         flex-direction: row;
         background-color: #f1d8c6;
@@ -169,39 +231,147 @@ footer p{
         align-items: center;
         justify-content: space-between;
     }
-    .menu ul{
+
+    .menu ul {
         display: flex;
         flex-direction: row;
     }
 
-    .menu li{
+    .menu li {
         padding: 1rem;
     }
-    .logo{
+
+    .logo {
         margin-top: 0rem;
         margin-left: 1rem;
     }
 
-    .main{ 
-        /* flex-flow: row wrap; */
-         grid-area: main;
+    .main {
+        grid-area: main;
     }
 
-    .contenedorCards{
+    .contenedorImagenTexto {
+        width: 57%;
+    }
+
+    .contenedorCards {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
     }
 
-
-    .footer{
+    .footer {
         grid-area: footer;
     }
-    .abajo{
+
+    .abajo {
         display: flex;
         flex-direction: row;
+        align-self: center;
+
     }
-    .card{
+
+    .card {
         margin: 1rem 0.5rem;
+    }
+
+    input {
+        width: 25rem;
+    }
+
+    textarea {
+        width: 25rem;
+    }
+
+    .mapa {
+        width: 25rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .body {
+        display: grid;
+        grid-template-columns: repeat(4 1fr);
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas:
+            "header header header"
+            "main main main main"
+            "footer footer footer footer";
+    }
+
+    .contenedorCards {
+        width: 100%;
+    }
+
+    .logo {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .header {
+        height: 7rem;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    button {
+        width: 5.5rem;
+        height: 2.5rem;
+    }
+
+    button p {
+        font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    input {
+        width: 45rem;
+        height: 2rem;
+    }
+
+    textarea {
+        width: 45rem;
+    }
+
+    .mapa {
+        width: 45rem;
+    }
+
+    .contenedorImagenTexto {
+        width: 75%;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .contenedorImagen {
+        width: 45%;
+    }
+
+    .contenedorImagen img {
+        display: flex;
+        width: 100%;
+    }
+
+    .contenedorParrafo {
+        width: 45%;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+
+    .whatsapp img {
+        width: 3rem;
+        height: 3rem;
     }
 }
