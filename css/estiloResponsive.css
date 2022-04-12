@@ -11,24 +11,36 @@ html {
 /* ---inicio estilos header--- */
 .header {
     z-index: 1000;
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    flex-direction:row; 
     background-color: #f1d8c6;
-    align-items: flex-start;
+    align-items:center;
     position: sticky;
     top: 0%;
 }
+.navbar-light .navbar-nav .nav-link {
+    color:#7b3c30
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color:#7b3c3090;
+}
 
 .logo {
-    width: 5rem;
-    height: 5rem;
-    margin-top: 1rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .contenedorLogo {
-    align-self: center;
+    align-self:center;
+}
+.contenedorNav{
+    width: 2rem;
 }
 
+.menu li {
+    list-style-type: none;
+}
 .menu a {
     text-decoration: none;
     color: #7b3c30;
@@ -36,16 +48,14 @@ html {
     font-size: 0.7rem;
 }
 
-.menu li {
-    list-style-type: none;
-}
 
-.menu {
+
+/* .menu {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
-}
+} */
 
-h1 {
+.titulo {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
@@ -61,6 +71,7 @@ h3 {
 }
 
 main {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +81,8 @@ main {
 
 
 /* --- inicio estilos card--- */
-.card {
+.cardP {
+   
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -90,25 +102,31 @@ main {
     color: #7b3c30;
 }
 
-.card img {
+.cardP img {
     width: 15rem;
     border-radius: 10px;
 }
 
 button {
     background-color: #7b3c30;
-    width: 5rem;
+    width: 6.5rem;
     height: 2rem;
     border-radius: 1rem;
     border-style: solid;
     border-color: #7b3c30;
     text-transform: uppercase;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 button:hover {
     background-color: white;
     color: #7b3c30;
+}
+.navbar-toggler{
+    width: 4rem;
+    padding: 0rem;
 }
 
 /* ---fin estilos card--- */
@@ -130,6 +148,7 @@ button:hover {
 /* --- fin preguntas frecuentes--- */
 
 .whatsapp {
+    width: auto;
     z-index: 1000;
     position: fixed;
     bottom: 1rem;
@@ -190,10 +209,10 @@ textarea {
     align-items: center;
     background-color: #f1d8c6;
     padding-top: 0.5rem;
-    width: 100%;
 }
 
 .footer p {
+    text-align: center;
     font-size: 0.5rem;
 }
 
@@ -201,6 +220,9 @@ textarea {
     align-self: flex-start;
 }
 
+.redesFooter{
+    width: auto;
+}
 .redesFooter a {
     text-decoration: none;
     color: #7b3c30;
@@ -215,7 +237,7 @@ textarea {
 }
 
 @media screen and (min-width:768px) {
-    .body {
+    /* .body {
         display: grid;
         grid-template-columns: repeat(3 1fr);
         grid-template-rows: repeat(3 1fr);
@@ -223,13 +245,12 @@ textarea {
             "header header header"
             "main main main"
             "footer footer footer";
-    }
+    } */
 
     .header {
-        height: 6rem;
         flex-direction: row;
         background-color: #f1d8c6;
-        grid-area: header;
+        /* grid-area: header; */
         align-items: center;
         justify-content: space-between;
     }
@@ -243,14 +264,10 @@ textarea {
         padding: 1rem;
     }
 
-    .logo {
-        margin-top: 0rem;
-        margin-left: 1rem;
-    }
 
-    .main {
+    /* .main {
         grid-area: main;
-    }
+    } */
 
     .contenedorImagenTexto {
         width: 57%;
@@ -262,18 +279,15 @@ textarea {
         justify-content: space-evenly;
     }
 
-    .footer {
-        grid-area: footer;
-    }
 
     .abajo {
+        width: auto;
         display: flex;
         flex-direction: row;
         align-self: center;
-
     }
 
-    .card {
+    .cardP {
         margin: 1rem 2rem;
     }
 
@@ -291,7 +305,7 @@ textarea {
 }
 
 @media screen and (min-width:1024px) {
-    .body {
+    /* .body {
         display: grid;
         grid-template-columns: repeat(4 1fr);
         grid-template-rows: repeat(4 1fr);
@@ -299,41 +313,44 @@ textarea {
             "header header header"
             "main main main main"
             "footer footer footer footer";
-    }
+    } */
 
     .contenedorCards {
         width: 100%;
     }
-
-    .card:hover {
+    .cardP {
+        margin: 1rem 1rem;
+    }
+    .cardP:hover {
         transform: scale(1.1);
     }
 
     .logo {
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     .header {
         height: 7rem;
     }
+    
 
     .menu a {
         font-size: 0.9rem;
         font-weight: bold;
     }
 
+
     .menu a:hover {
         /* cambia el color con opacidad 90 */
         color: #7b3c3090;
     }
 
-    h1 {
+    .titulo {
         font-size: 3rem;
     }
 
     button {
-        width: 5.5rem;
         height: 2.5rem;
     }
 
