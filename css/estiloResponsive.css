@@ -11,19 +11,20 @@ html {
 /* ---inicio estilos header--- */
 .header {
     z-index: 1000;
-    display: flex; 
-    flex-direction:row; 
+    display: flex;
+    flex-direction: row;
     background-color: #f1d8c6;
-    align-items:center;
+    align-items: center;
     position: sticky;
     top: 0%;
 }
+
 .navbar-light .navbar-nav .nav-link {
-    color:#7b3c30
+    color: #7b3c30
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color:#7b3c3090;
+    color: #7b3c3090;
 }
 
 .logo {
@@ -32,15 +33,17 @@ html {
 }
 
 .contenedorLogo {
-    align-self:center;
+    align-self: center;
 }
-.contenedorNav{
+
+.contenedorNav {
     width: 2rem;
 }
 
 .menu li {
     list-style-type: none;
 }
+
 .menu a {
     text-decoration: none;
     color: #7b3c30;
@@ -82,7 +85,7 @@ main {
 
 /* --- inicio estilos card--- */
 .cardP {
-   
+
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -124,7 +127,8 @@ button:hover {
     background-color: white;
     color: #7b3c30;
 }
-.navbar-toggler{
+
+.navbar-toggler {
     width: 4rem;
     padding: 0rem;
 }
@@ -220,9 +224,10 @@ textarea {
     align-self: flex-start;
 }
 
-.redesFooter{
+.redesFooter {
     width: auto;
 }
+
 .redesFooter a {
     text-decoration: none;
     color: #7b3c30;
@@ -318,9 +323,11 @@ textarea {
     .contenedorCards {
         width: 100%;
     }
+
     .cardP {
         margin: 1rem 1rem;
     }
+
     .cardP:hover {
         transform: scale(1.1);
     }
@@ -333,7 +340,7 @@ textarea {
     .header {
         height: 7rem;
     }
-    
+
 
     .menu a {
         font-size: 0.9rem;
