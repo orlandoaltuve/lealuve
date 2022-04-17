@@ -3,26 +3,34 @@
     padding: 0;
 }
 
-html {
-    font-size: 62, 5%;
-    font-family: 'Montserrat', sans-serif;
+p{
+    color: black;
+    font-family: 'Montserrat', sans-serif; 
 }
 
 /* ---inicio estilos header--- */
 .header {
     z-index: 1000;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: row; */
     background-color: #f1d8c6;
-    align-items: flex-start;
+    /* align-items: center;
+    justify-content: space-between; */
     position: sticky;
     top: 0%;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: #7b3c30
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #7b3c3090;
+}
+
 .logo {
-    width: 5rem;
-    height: 5rem;
-    margin-top: 1rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .contenedorLogo {
@@ -40,12 +48,12 @@ html {
     list-style-type: none;
 }
 
-.menu {
+/* .menu {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
-}
+} */
 
-h1 {
+.titulo {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
@@ -70,7 +78,7 @@ main {
 
 
 /* --- inicio estilos card--- */
-.card {
+.cardP {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -90,25 +98,31 @@ main {
     color: #7b3c30;
 }
 
-.card img {
+.cardP img {
     width: 15rem;
     border-radius: 10px;
 }
 
 button {
     background-color: #7b3c30;
-    width: 5rem;
+    width: 6.5rem;
     height: 2rem;
     border-radius: 1rem;
     border-style: solid;
     border-color: #7b3c30;
     text-transform: uppercase;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {
     background-color: white;
     color: #7b3c30;
+}
+
+.navbar-toggler {
+    width: 4rem;
+    padding: 0rem;
 }
 
 /* ---fin estilos card--- */
@@ -226,7 +240,6 @@ textarea {
     }
 
     .header {
-        height: 6rem;
         flex-direction: row;
         background-color: #f1d8c6;
         grid-area: header;
@@ -241,11 +254,6 @@ textarea {
 
     .menu li {
         padding: 1rem;
-    }
-
-    .logo {
-        margin-top: 0rem;
-        margin-left: 1rem;
     }
 
     .main {
@@ -273,7 +281,7 @@ textarea {
 
     }
 
-    .card {
+    .cardP {
         margin: 1rem 2rem;
     }
 
@@ -305,18 +313,15 @@ textarea {
         width: 100%;
     }
 
-    .card:hover {
+    .cardP:hover {
         transform: scale(1.1);
     }
 
     .logo {
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
     }
 
-    .header {
-        height: 7rem;
-    }
 
     .menu a {
         font-size: 0.9rem;
@@ -328,12 +333,11 @@ textarea {
         color: #7b3c3090;
     }
 
-    h1 {
+    .titulo {
         font-size: 3rem;
     }
 
     button {
-        width: 5.5rem;
         height: 2.5rem;
     }
 
