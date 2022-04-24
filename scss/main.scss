@@ -10,6 +10,21 @@ p {
     font-family: $fontPrincipal;
 }
 
+/* inicio mixins */
+@mixin flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin grids ($grid, $colums, $rows) {
+    display: $grid;
+    grid-template-columns: $colums;
+    grid-template-rows: $rows;
+}
+
+/* fin mixins */
+
 .header {
     z-index: 1000;
     background-color: $colorPrincipal;
@@ -63,18 +78,14 @@ h3 {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox();
 }
 
 /*  inicio estilos card */
 .cardP {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox();
 
     img {
         width: 15rem;
@@ -94,16 +105,28 @@ main {
     color: $colorSecundario;
 }
 
+/* MAP */
+$estilosButton: (bgColor: $colorSecundario,
+    6.5rem: 6.5rem,
+    2rem: 2rem,
+    1rem: 1rem,
+    style: solid,
+    bColor: $colorSecundario,
+    textT: uppercase,
+    color: white,
+    fontF: $fontPrincipal,
+);
+
 button {
-    background-color: $colorSecundario;
-    width: 6.5rem;
-    height: 2rem;
-    border-radius: 1rem;
-    border-style: solid;
-    border-color: $colorSecundario;
-    text-transform: uppercase;
-    color: white;
-    font-family: $fontPrincipal;
+    background-color: map-get($estilosButton, bgColor);
+    width: map-get($estilosButton, 6.5rem);
+    height: map-get($estilosButton, 2rem);
+    border-radius: map-get($estilosButton, 1rem);
+    border-style: map-get($estilosButton, style);
+    border-color: map-get($estilosButton, bColor);
+    text-transform: map-get($estilosButton, textT);
+    color: map-get($estilosButton, color);
+    font-family: map-get($estilosButton, fontF);
 
     &:hover {
         background-color: white;
@@ -149,9 +172,7 @@ button {
 }
 
 .newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox();
     margin: 3rem 0rem;
 }
 
@@ -168,21 +189,15 @@ input {
 }
 
 textarea {
-    width: 15rem;
+    @extend input;
     height: 10rem;
-    border-radius: 1rem;
-    border-style: solid;
-    border-color: $colorSecundario;
-    border-width: 0.1rem;
     padding-top: 1rem;
     padding-left: 1rem;
     margin: 1rem 0rem 1rem 0rem;
 }
 
 .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox();
 }
 
 /* --- fin formulario--- */
@@ -191,9 +206,7 @@ textarea {
 
 .footer {
     margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox();
     background-color: $colorPrincipal;
     padding-top: 0.5rem;
     width: 100%;
@@ -224,9 +237,7 @@ textarea {
 
 @media screen and (min-width:768px) {
     .body {
-        display: grid;
-        grid-template-columns: repeat(3 1fr);
-        grid-template-rows: repeat(3 1fr);
+        @include grids(grid, repeat(3 1fr), repeat(3 1fr));
         grid-template-areas:
             "header header header"
             "main main main"
@@ -284,10 +295,6 @@ textarea {
         width: 25rem;
     }
 
-    textarea {
-        width: 25rem;
-    }
-
     .mapa {
         width: 25rem;
     }
@@ -295,9 +302,7 @@ textarea {
 
 @media screen and (min-width:1024px) {
     .body {
-        display: grid;
-        grid-template-columns: repeat(4 1fr);
-        grid-template-rows: repeat(4 1fr);
+        @include grids(grid, repeat(4 1fr), repeat(4 1fr));
         grid-template-areas:
             "header header header"
             "main main main main"
@@ -339,10 +344,6 @@ textarea {
 
     button {
         height: 2.5rem;
-
-        p {
-            font-size: 0.9rem;
-        }
     }
 
     h3 {
@@ -355,7 +356,7 @@ textarea {
     }
 
     textarea {
-        width: 45rem;
+        height: 10rem;
     }
 
     .mapa {
@@ -370,6 +371,7 @@ textarea {
 
     .contenedorImagen {
         width: 45%;
+
         img {
             display: flex;
             width: 100%;
