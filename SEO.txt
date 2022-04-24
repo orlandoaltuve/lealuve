@@ -1,0 +1,26 @@
+1)Coloque las siguientes keywords: 
+Lealuve, accesorios, accedorios de indumentaria, mochila, riñonera, cartera, tienda online, moda, moda femenina, bandolera, billetera
+
+
+2)Agregue las siguientes descripciones: 
+
+*pagina index: 
+Tienda online de accesorios de moda. Mochilas, riñoneras, bandoleras y mucho mas. Compra online y aprovecha el envío gratis a todo el país
+
+*pagina productos:
+Acesorios de excelente calidad, elaborados con ecocuero (libre de crueldad animal). Descuentos abonando con transferencia. 3 cuotas sin interés
+
+*pagina preguntas frecuentes:
+En esta sección podrás aclarar posibles dudas e iquietudes. Encontraras las respuestas a las preguntas mas frecuentes
+
+*pagina nosotros: 
+Conoce mi historia, una mujer apasionada por la moda y el estilo casual
+
+*pagina contacto:
+Contactanos para una atencion personalizada. Tambien puedes visitarnos en nuestra tienda física
+
+
+3)Modifique el titulo de cada página
+
+
+4)Modifique el alt de las imágenes de cada producto.
