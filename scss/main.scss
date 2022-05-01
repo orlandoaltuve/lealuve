@@ -62,12 +62,19 @@ p {
     }
 }
 
+.tituloSecundario {
+    text-align: center;
+    color: $colorSecundario;
+    font-family: $fontSecundario;
+    margin-bottom: 0.5rem;
+
+}
+
 .titulo {
+    @extend .tituloSecundario;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-family: $fontSecundario;
     font-size: 1.7rem;
-    color: $colorSecundario;
 }
 
 h3 {
@@ -85,11 +92,18 @@ main {
 .cardP {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    width: 15rem;
+    text-align: center;
     @include flexbox();
 
     img {
         width: 15rem;
         border-radius: 10px;
+    }
+
+    i {
+        margin-top: 1.5rem;
+        color: $colorSecundario;
     }
 }
 
@@ -106,8 +120,7 @@ main {
 }
 
 /* MAP */
-$estilosButton: (
-    bgColor: $colorSecundario,
+$estilosButton: (bgColor: $colorSecundario,
     6.5rem: 6.5rem,
     2rem: 2rem,
     1rem: 1rem,
@@ -145,17 +158,24 @@ button {
 /* ---  inicio preguntas frecuentes --- */
 .contenedorImagen {
     img {
-        display: none;
+        width: 100%;
     }
 }
 
 .contenedorImagenTexto {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: center;
+    align-items: center;
     width: 70%;
     text-align: justify;
     margin-bottom: 2rem;
+}
+
+.pregunta {
+    text-align: center;
+    font-weight: bold;
+    color: $colorSecundario;
 }
 
 /* --- fin preguntas frecuentes--- */
@@ -174,7 +194,7 @@ button {
 
 .newsletter {
     @include flexbox();
-    margin: 3rem 0rem;
+    margin-bottom: 3rem;
 }
 
 /* --- inicio formulario--- */
@@ -267,14 +287,11 @@ textarea {
         grid-area: main;
     }
 
-    .contenedorImagenTexto {
-        width: 57%;
-    }
-
     .contenedorCards {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
+        margin-bottom: 4rem;
     }
 
     .footer {
@@ -365,6 +382,7 @@ textarea {
     }
 
     .contenedorImagenTexto {
+        flex-direction: row;
         width: 75%;
         justify-content: space-between;
         margin-bottom: 2rem;
@@ -372,11 +390,6 @@ textarea {
 
     .contenedorImagen {
         width: 45%;
-
-        img {
-            display: flex;
-            width: 100%;
-        }
     }
 
     .contenedorParrafo {

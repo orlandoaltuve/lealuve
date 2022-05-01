@@ -36,12 +36,16 @@ p {
 .menu li {
   list-style-type: none; }
 
+.tituloSecundario, .titulo {
+  text-align: center;
+  color: #7b3c30;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.5rem; }
+
 .titulo {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.7rem;
-  color: #7b3c30; }
+  font-size: 1.7rem; }
 
 h3 {
   margin-top: 1rem;
@@ -58,12 +62,17 @@ main {
 .cardP {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  width: 15rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center; }
   .cardP img {
     width: 15rem;
     border-radius: 10px; }
+  .cardP i {
+    margin-top: 1.5rem;
+    color: #7b3c30; }
 
 .nombreProducto {
   margin: 0.5rem;
@@ -97,15 +106,21 @@ button {
 
 /* ---  inicio preguntas frecuentes --- */
 .contenedorImagen img {
-  display: none; }
+  width: 100%; }
 
 .contenedorImagenTexto {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
   width: 70%;
   text-align: justify;
   margin-bottom: 2rem; }
+
+.pregunta {
+  text-align: center;
+  font-weight: bold;
+  color: #7b3c30; }
 
 /* --- fin preguntas frecuentes--- */
 .whatsapp {
@@ -121,7 +136,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 0rem; }
+  margin-bottom: 3rem; }
 
 /* --- inicio formulario--- */
 input, textarea {
@@ -189,12 +204,11 @@ textarea {
     padding: 1rem; }
   .main {
     grid-area: main; }
-  .contenedorImagenTexto {
-    width: 57%; }
   .contenedorCards {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    margin-bottom: 4rem; }
   .footer {
     grid-area: footer; }
   .abajo {
@@ -241,14 +255,12 @@ textarea {
   .mapa {
     width: 45rem; }
   .contenedorImagenTexto {
+    flex-direction: row;
     width: 75%;
     justify-content: space-between;
     margin-bottom: 2rem; }
   .contenedorImagen {
     width: 45%; }
-    .contenedorImagen img {
-      display: flex;
-      width: 100%; }
   .contenedorParrafo {
     width: 45%; }
   .footer p {
