@@ -5,10 +5,14 @@
     padding: 0;
 }
 
+
+
 p {
     color: black;
     font-family: $fontPrincipal;
 }
+
+
 
 /* inicio mixins */
 @mixin flexbox {
@@ -146,6 +150,18 @@ $estilosButton: (bgColor: $colorSecundario,
 
 /* ---fin estilos card--- */
 
+.boton-vaciarCarrito{
+    @extend .boton-principal;
+    width: 8.5rem;
+    margin: 0.5rem;
+    font-size: 13px;
+}
+
+.boton-iniciarCompra{
+    @extend .boton-vaciarCarrito
+}
+
+
 #boton-carrito{
     border: none;
     background-color:$colorPrincipal;
@@ -159,6 +175,10 @@ $estilosButton: (bgColor: $colorSecundario,
     color: $colorSecundario;
 }
 
+.botones-modal{
+    display: flex;
+    justify-content: space-evenly;
+}
 .modal-contenedor {
     z-index: 200000;
     position: fixed;
@@ -181,13 +201,13 @@ $estilosButton: (bgColor: $colorSecundario,
 }
 
 .modal-carrito {
-    min-width: 500px;
+    min-width: 100%;
     overflow-y: auto;
     max-height: 80vh;
     margin-top: 0rem;
     position: relative;
     background-color: white;
-    padding: 20px;
+    padding: 5px;
     transition: all .5s;
 
     h3{
@@ -393,6 +413,11 @@ textarea {
     .mapa {
         width: 25rem;
     }
+
+    .modal-carrito{
+        padding: 30px;
+        min-width: 50%;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -479,6 +504,17 @@ textarea {
         width: 45%;
     }
 
+    .modal-carrito{
+        min-width: 40%;
+    }
+    .boton-iniciarCompra{
+        width: 12rem;
+        font-size: 16px;
+    }
+
+    .boton-vaciarCarrito{
+        @extend .boton-iniciarCompra
+    }
     .footer {
         p {
             font-size: 0.75rem;
@@ -489,6 +525,16 @@ textarea {
         img {
             width: 3rem;
             height: 3rem;
+        }
+    }
+
+    #boton-carrito{
+        padding: 10px;
+        &:hover{
+            border-radius: 1rem;
+            background-color: $colorSecundario;
+            color: white;
+            
         }
     }
 

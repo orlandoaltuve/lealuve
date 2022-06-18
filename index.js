@@ -1,0 +1,1 @@
+cargarProductos("index")

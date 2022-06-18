@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href="../multimedia/Lealuve ico.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/091ce6828c.js" crossorigin="anonymous"></script>
+    <script defer src="../modal.js"></script>
+    <script defer src="../BBDD.js"> </script>
+    <script defer src="../app.js"></script>
 </head>
 
 <body class="body">
@@ -53,10 +56,13 @@
                         </li>
 
                     </ul>
+                    <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span
+                        id="contadorCarrito">0</span></button>
                 </div>
 
             </div>
         </nav>
+        
     </header>
 
     <main class="main">
@@ -91,6 +97,20 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </main>
+    <div id="contenedorModal" class="modal-contenedor">
+        <div id="estructuraCarrito" class="modal-carrito">
+            <h3>Carrito de Compras</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor"></div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <div class="botones-modal">
+                <button id="vaciar-carrito" class="boton-vaciarCarrito">Vaciar Carrito</button>
+                <button id="iniciar-compra" class="boton-iniciarCompra">Iniciar Compra</button>
+                
+            </div>
+            
+        </div>
+    </div>
 
     <div class="whatsapp">
         <a href="https://wa.me/5491125470160" target="_blank"><img src="../multimedia/whatsapp.png" alt="whatsapp"></a>

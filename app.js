@@ -2,23 +2,32 @@ const contenedorProductos=document.querySelector("#contenedor-productos")
 const carritoContenedor=document.querySelector("#carrito-contenedor")
 const totalCarrito=document.querySelector("#precioTotal")
 const cantidadEnCarrito=document.querySelector("#contadorCarrito")
+const btnVaciarCarro=document.querySelector("#vaciar-carrito")
 const carrito=[]
 
 //generar el DOM de toddos los productos
 
-BBDD.forEach((el)=>{
-    const div=document.createElement("div")
-    div.classList.add("cardP")
-    div.innerHTML= `
-                <img src=${el.img} alt=${el.nombre}>
-                <p class="nombreProducto">${el.nombre}</p>
-                <P class="precioProducto">$${el.precio}</P>
-                <button onclick="agregarAlCarrito(${el.id})" class="boton-principal"> Agregar </button>
-                    `
 
-    contenedorProductos.append(div)
-
-})
+function cargarProductos(pagina){
+    let ruta=""
+    if(pagina==="productos"){
+        ruta="."
+    }
+   
+    BBDD.forEach((el)=>{ //dom deproductos para la pagina index
+        const div=document.createElement("div")
+        div.classList.add("cardP")
+        div.innerHTML= `
+                    <img src=${ruta+el.img} alt=${el.nombre}>
+                    <p class="nombreProducto">${el.nombre}</p>
+                    <P class="precioProducto">$${el.precio}</P>
+                    <button onclick="agregarAlCarrito(${el.id})" class="boton-principal"> Agregar </button>
+                        `
+    
+        contenedorProductos.append(div)
+    
+    })
+}
 
 function agregarAlCarrito(id){
     let item= BBDD.find((producto)=>producto.id===id)
@@ -68,8 +77,14 @@ function renderCarrito () {
     cantidadEnCarrito.innerText= carrito.length
  }
 
+ const vaciarCarro=()=>{
+    carrito.length=0
+    renderCarrito()
+    calcularTotal()
+    renderCantidad()
+ }
 
-
+ btnVaciarCarro.addEventListener("click",vaciarCarro)
 
 
 
