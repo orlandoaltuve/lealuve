@@ -85,7 +85,7 @@ main {
   color: #7b3c30; }
 
 /* MAP */
-button {
+.boton-principal {
   background-color: #7b3c30;
   width: 6.5rem;
   height: 2rem;
@@ -97,6 +97,67 @@ button {
   font-family: "Montserrat", sans-serif; }
 
 /* ---fin estilos card--- */
+#boton-carrito {
+  border: none;
+  background-color: #f1d8c6;
+  color: #7b3c30;
+  font-size: 2rem;
+  margin-right: 0.7rem; }
+
+.boton-eliminar {
+  border: none;
+  background-color: white;
+  color: #7b3c30; }
+
+.modal-contenedor {
+  z-index: 200000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden; }
+
+.modal-active {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible; }
+
+.modal-carrito {
+  min-width: 500px;
+  overflow-y: auto;
+  max-height: 80vh;
+  margin-top: 0rem;
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  transition: all .5s; }
+  .modal-carrito h3 {
+    color: #7b3c30;
+    padding-bottom: 5px; }
+  .modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #7b3c30;
+    border: none;
+    background-color: white; }
+
+.productoEnCarrito {
+  border-left: 5px solid #7b3c30;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between; }
+
 .navbar-toggler {
   width: 4rem;
   padding: 0rem; }
@@ -249,9 +310,9 @@ textarea {
       color: #7b3c3090; }
   .titulo {
     font-size: 3rem; }
-  button {
+  .boton-principal {
     height: 2.5rem; }
-    button:hover {
+    .boton-principal:hover {
       background-color: white;
       color: #7b3c30; }
   h3 {
