@@ -3,7 +3,11 @@ const carritoContenedor=document.querySelector("#carrito-contenedor")
 const totalCarrito=document.querySelector("#precioTotal")
 const cantidadEnCarrito=document.querySelector("#contadorCarrito")
 const btnVaciarCarro=document.querySelector("#vaciar-carrito")
-const carrito=[]
+let carrito
+const carritoEnLs= JSON.parse(localStorage.getItem("carrito"))
+
+
+
 
 //generar el DOM de toddos los productos
 
@@ -32,6 +36,7 @@ function cargarProductos(pagina){
 function agregarAlCarrito(id){
     let item= BBDD.find((producto)=>producto.id===id)
     carrito.push(item)
+    localStorage.setItem("carrito",JSON.stringify(carrito))
     console.log(carrito)
     renderCarrito()
     calcularTotal()
@@ -43,6 +48,7 @@ function eliminarDelCarrito(id){
     const item = carrito.find((el) => el.id === id)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
+    localStorage.setItem("carrito",JSON.stringify(carrito))
     renderCarrito()
     calcularTotal()
     renderCantidad()
@@ -79,6 +85,7 @@ function renderCarrito () {
 
  const vaciarCarro=()=>{
     carrito.length=0
+    localStorage.setItem("carrito",JSON.stringify(carrito))
     renderCarrito()
     calcularTotal()
     renderCantidad()
@@ -86,6 +93,13 @@ function renderCarrito () {
 
  btnVaciarCarro.addEventListener("click",vaciarCarro)
 
-
+ if(carritoEnLs){
+    carrito=carritoEnLs
+    renderCarrito()
+    calcularTotal()
+    renderCantidad()
+}else{
+    carrito=[]
+}
 
 
