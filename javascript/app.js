@@ -18,7 +18,7 @@ function cargarProductos(pagina){
         ruta="."
     }
    
-    BBDD.forEach((el)=>{ //dom deproductos para la pagina index
+    BBDD.forEach((el)=>{ //dom deproductos para la pagina 
         const div=document.createElement("div")
         div.classList.add("cardP")
         div.innerHTML= `
@@ -34,10 +34,21 @@ function cargarProductos(pagina){
 }
 
 function agregarAlCarrito(id){
-    let item= BBDD.find((producto)=>producto.id===id)
+    let estaEnCarrito=false
+    carrito.forEach((el)=>{
+        if(el.id===id){
+            el.cantidad++
+            estaEnCarrito=true
+            console.log(BBDD)
+        }
+    })
+    if(!estaEnCarrito){
+    let item= Object.assign({} , BBDD.find((producto)=>producto.id===id))
+    item.cantidad++
     carrito.push(item)
+    console.log(BBDD)
+    }
     localStorage.setItem("carrito",JSON.stringify(carrito))
-    console.log(carrito)
     renderCarrito()
     calcularTotal()
     renderCantidad()
@@ -62,8 +73,10 @@ function renderCarrito () {
         div.classList.add('productoEnCarrito')
 
         div.innerHTML = `
+                    <img src=${item.img} alt=${item.nombre}>
                     <p>${item.nombre}</p>
-                    <p>Precio: $${item.precio}</p>
+                    <p> Cantidad:${item.cantidad}</p>
+                    <p>$${item.precio}</p>
                     <button onclick="eliminarDelCarrito(${item.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
                     `
         
