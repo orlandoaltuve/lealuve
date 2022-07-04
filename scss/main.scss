@@ -170,11 +170,28 @@ $estilosButton: (bgColor: $colorSecundario,
     margin-right: 0.7rem;
 }
 .boton-eliminar{
+    position: absolute;
+    right: 15px;
     border: none;
     background-color: white;
     color: $colorSecundario;
 }
 
+.boton-alert{
+    border-radius: 1rem !important;
+    background-color: $colorSecundario !important;
+    color: white !important;
+    border-color: $colorSecundario !important;
+    border-style: solid !important;
+    font-family: $fontPrincipal !important;
+}
+.alert-icon{
+    color: $colorSecundario !important;
+    border-color: $colorSecundario !important;
+} 
+.alert-title{
+    color: $colorSecundario !important;
+}
 .botones-modal{
     display: flex;
     justify-content: space-evenly;
@@ -223,16 +240,24 @@ $estilosButton: (bgColor: $colorSecundario,
         border: none;
         background-color: white;
     }
+
 }
 
 .productoEnCarrito {
     border-left: 5px solid $colorSecundario;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
-    margin: 5px 0;
-    padding: 5px 10px;
+    margin: 1rem 0;
+    // padding: 2px 5px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 20%;
+    }
+    p{
+        margin: 0rem;
+    }
 }
 
 
@@ -416,7 +441,12 @@ textarea {
 
     .modal-carrito{
         padding: 30px;
-        min-width: 50%;
+        max-width: 50%;
+    }
+    .productoEnCarrito{
+        padding: 2px 50px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -534,10 +564,9 @@ textarea {
             border-radius: 1rem;
             background-color: $colorSecundario;
             color: white;
-            
+
         }
     }
-
     .redesFooter {
         font-size: 1.4rem;
 
