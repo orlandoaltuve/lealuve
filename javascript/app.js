@@ -65,7 +65,7 @@ function renderCarrito () {
                     <img src=${ruta+item.img} alt=${item.nombre}>
                     <p>${item.nombre}</p>
                     <p> Cantidad: ${item.cantidad}</p>
-                    <p>$ ${item.precio}</p>
+                    <p> Precio Unitario: $${item.precio}</p>
                     <button onclick="eliminarDelCarrito(${item.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
                     `
         
