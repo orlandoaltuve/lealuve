@@ -116,6 +116,21 @@ main {
   background-color: white;
   color: #7b3c30; }
 
+.boton-alert {
+  border-radius: 1rem !important;
+  background-color: #7b3c30 !important;
+  color: white !important;
+  border-color: #7b3c30 !important;
+  border-style: solid !important;
+  font-family: "Montserrat", sans-serif !important; }
+
+.alert-icon {
+  color: #7b3c30 !important;
+  border-color: #7b3c30 !important; }
+
+.alert-title {
+  color: #7b3c30 !important; }
+
 .botones-modal {
   display: flex;
   justify-content: space-evenly; }
@@ -304,7 +319,11 @@ textarea {
     width: 25rem; }
   .modal-carrito {
     padding: 30px;
-    min-width: 50%; } }
+    max-width: 50%; }
+  .productoEnCarrito {
+    padding: 2px 50px;
+    flex-direction: row;
+    justify-content: space-between; } }
 
 @media screen and (min-width: 1024px) {
   .body {

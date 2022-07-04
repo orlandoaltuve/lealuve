@@ -177,6 +177,21 @@ $estilosButton: (bgColor: $colorSecundario,
     color: $colorSecundario;
 }
 
+.boton-alert{
+    border-radius: 1rem !important;
+    background-color: $colorSecundario !important;
+    color: white !important;
+    border-color: $colorSecundario !important;
+    border-style: solid !important;
+    font-family: $fontPrincipal !important;
+}
+.alert-icon{
+    color: $colorSecundario !important;
+    border-color: $colorSecundario !important;
+} 
+.alert-title{
+    color: $colorSecundario !important;
+}
 .botones-modal{
     display: flex;
     justify-content: space-evenly;
@@ -225,7 +240,7 @@ $estilosButton: (bgColor: $colorSecundario,
         border: none;
         background-color: white;
     }
-    
+
 }
 
 .productoEnCarrito {
@@ -426,7 +441,12 @@ textarea {
 
     .modal-carrito{
         padding: 30px;
-        min-width: 50%;
+        max-width: 50%;
+    }
+    .productoEnCarrito{
+        padding: 2px 50px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -544,10 +564,9 @@ textarea {
             border-radius: 1rem;
             background-color: $colorSecundario;
             color: white;
-            
+
         }
     }
-
     .redesFooter {
         font-size: 1.4rem;
 
