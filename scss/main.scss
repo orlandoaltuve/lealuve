@@ -162,12 +162,15 @@ $estilosButton: (bgColor: $colorSecundario,
 }
 
 
-#boton-carrito{
+#boton-carrito{  
+    z-index: 5000000; 
     border: none;
     background-color:$colorPrincipal;
     color: $colorSecundario;
-    font-size: 2rem;
-    margin-right: 0.7rem;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 0.9rem;
+    left: 48%;
 }
 .boton-eliminar{
     position: absolute;
@@ -559,6 +562,8 @@ textarea {
     }
 
     #boton-carrito{
+        font-size: 2rem;
+        left: 90%;
         padding: 10px;
         &:hover{
             border-radius: 1rem;
