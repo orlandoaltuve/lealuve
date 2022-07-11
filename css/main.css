@@ -103,11 +103,14 @@ main {
   font-size: 13px; }
 
 #boton-carrito {
+  z-index: 5000000;
   border: none;
   background-color: #f1d8c6;
   color: #7b3c30;
-  font-size: 2rem;
-  margin-right: 0.7rem; }
+  font-size: 1.6rem;
+  position: fixed;
+  top: 0.9rem;
+  left: 48%; }
 
 .boton-eliminar {
   position: absolute;
@@ -381,6 +384,8 @@ textarea {
     width: 3rem;
     height: 3rem; }
   #boton-carrito {
+    font-size: 2rem;
+    left: 90%;
     padding: 10px; }
     #boton-carrito:hover {
       border-radius: 1rem;

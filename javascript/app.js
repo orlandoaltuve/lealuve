@@ -4,21 +4,31 @@ const totalCarrito=document.querySelector("#precioTotal")
 const cantidadEnCarrito=document.querySelector("#contadorCarrito")
 const btnVaciarCarro=document.querySelector("#vaciar-carrito")
 let carrito= JSON.parse(localStorage.getItem("carrito"))||[]
+let stock=[]
 
-//generar el DOM de toddos los productos
+// generar el DOM de toddos los productos
 function cargarProductos(pagina){
     let ruta=pagina==="productos" ? ".":""
-    BBDD.forEach((el)=>{ //dom deproductos para la pagina 
-        const div=document.createElement("div")
-        div.classList.add("cardP")
-        div.innerHTML= `
-                    <img src=${ruta+el.img} alt=${el.nombre}>
-                    <p class="nombreProducto">${el.nombre}</p>
-                    <P class="precioProducto">$${el.precio}</P>
-                    <button onclick="agregarAlCarrito(${el.id})" class="boton-principal"> Agregar </button>
-                        `
-        contenedorProductos.append(div)
-    })
+    fetch("../javascript/BBDD.json")
+        .then((resp)=>resp.json())
+        .then((data)=> {
+            stock=data
+
+            stock.forEach((el)=>{ //dom deproductos para la pagina 
+                const div=document.createElement("div")
+                div.classList.add("cardP")
+                div.innerHTML= `
+                            <img src=${ruta+el.img} alt=${el.nombre}>
+                            <p class="nombreProducto">${el.nombre}</p>
+                            <P class="precioProducto">$${el.precio}</P>
+                            <button onclick="agregarAlCarrito(${el.id})" class="boton-principal"> Agregar </button>
+                                `
+                contenedorProductos.append(div)
+            })
+
+        })
+
+
 }
 
 function agregarAlCarrito(idProducto){
@@ -27,7 +37,7 @@ function agregarAlCarrito(idProducto){
         item.cantidad++
         mensajeToastify(item.nombre,"agregó")
     }else{
-        const BaseDeDatos=[...BBDD]// se que puedo trabajar directamente con BBDD y no es necesario hacer el Spread, pero lo hice para cumplir con el desafío de implementarlo
+        const BaseDeDatos=[...stock]// se que puedo trabajar directamente con stock y no es necesario hacer el Spread, pero lo hice para cumplir con el desafío de implementarlo
         const {id,nombre,precio,img}=BaseDeDatos.find((producto)=>producto.id===idProducto)
         const item={id, nombre, precio, img, cantidad:1 }
         carrito.push(item)
@@ -114,13 +124,10 @@ function renderCarrito () {
 const mensajeToastify= (nombre,mensaje)=>{  //mensaje cuando agrega o elimina un producto al carrito
     let pronombre= mensaje==="eliminó" ? "del" : "al"
     Toastify({
-        text: `Se ${mensaje} 1 ${nombre} ${pronombre} carrito!`,
+        text: `¡Se ${mensaje} 1 ${nombre} ${pronombre} carrito!`,
         duration: 3000,
         gravity: 'bottom',
         position: 'left',
-        onClick: () => {
-            botonAbrir.click()
-        },
         style: {
             background: "linear-gradient(to right, #7b3c3090, #7b3c30)"
           }
