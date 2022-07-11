@@ -9,7 +9,7 @@ let stock=[]
 // generar el DOM de toddos los productos
 function cargarProductos(pagina){
     let ruta=pagina==="productos" ? ".":""
-    fetch("../javascript/BBDD.json")
+    fetch("/javascript/BBDD.json")
         .then((resp)=>resp.json())
         .then((data)=> {
             stock=data
