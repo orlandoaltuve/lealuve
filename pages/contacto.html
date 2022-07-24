@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="shortcut icon" href="../multimedia/Lealuve ico.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/091ce6828c.js" crossorigin="anonymous"></script>
+    <script defer src="../javascript/contacto.js"></script>
     <script defer src="../javascript/modal.js"></script>
     <script defer src="../javascript/app.js"></script>
 </head>
@@ -70,22 +71,23 @@
         <h1 class="titulo">Contacto</h1>
 
         <div class="contenedorFormulario">
-            <form class="formulario">
+            <form id= "formContacto" class="formulario">
 
                 <label for="nombre"></label>
-                <input type="text" placeholder="Nombre" name="nombre" required>
+                <input type="text" placeholder="Nombre" name="nombre" id="name" required>
                 <label for="email"></label>
-                <input type="email" placeholder="Email" name="email" required>
+                <input type="email" placeholder="Email" name="email" id="email" required>
                 <label for="telefono"></label>
-                <input type="text" placeholder="Teléfono" name="telefono" required>
+                <input type="text" placeholder="Teléfono" name="telefono" id="phone" required>
                 <label for="mensaje"></label>
-                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Deje aquí su comentario"
+                <textarea name="mensaje" id="message" cols="30" rows="10" placeholder="Deje aquí su comentario"
                     required></textarea>
-                <div class="contButtonForm">
-                    <button class="boton-principal" type="submit">
+                    <h3 id="texContacto"></h3>
+                    <div class="contButtonForm">
+                    <button id="btnForm" class="boton-principal" type="submit">
                         Enviar
                     </button>
-                    <button class="boton-principal" type="reset">
+                    <button id="eliminarContacto" class="boton-principal" type="reset">
                         Eliminar
                     </button>
                 </div>
@@ -143,6 +145,10 @@
         crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-</body>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            emailjs.init('ZaUdSTZHEaVUesqBk')
+        </script>
+    </body>
 
 </html>

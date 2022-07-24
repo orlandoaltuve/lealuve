@@ -6,13 +6,6 @@ const estructuraCarrito = document.querySelector("#estructuraCarrito")
 btnAbrir.addEventListener('click', () => {
     if (carrito.length === 0) {
         mensajeCarroVacio()
-        // Swal.fire({
-        //     customClass: {
-        //         confirmButton: 'boton-alert',
-        //         title: 'alert-title'
-        //     },
-        //     title:"El carrito está vacío"
-        // })
     } else {
         contenedorModal.classList.toggle("modal-active")
     }

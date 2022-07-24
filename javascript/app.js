@@ -35,13 +35,13 @@ function agregarAlCarrito(idProducto){ // agrega un producto al carrito
     const item= carrito.find((producto)=>producto.id===idProducto)
     if(item){
         item.cantidad++
-        mensajeToastify(item.nombre,"agregó")
+        mensajeToastify(`¡Se agregó 1 ${item.nombre} al carrito!`)
     }else{
         const BaseDeDatos=[...stock]// se que puedo trabajar directamente con stock y no es necesario hacer el Spread, pero lo hice para cumplir con el desafío de implementarlo
         const {id,nombre,precio,img}=BaseDeDatos.find((producto)=>producto.id===idProducto)
         const item={id, nombre, precio, img, cantidad:1 }
         carrito.push(item)
-        mensajeToastify(item.nombre,"agregó")
+        mensajeToastify(`¡Se agregó 1 ${item.nombre} al carrito!`)
     }
     localStorage.setItem("carrito",JSON.stringify(carrito))
     renderCarrito()
@@ -56,7 +56,7 @@ function eliminarDelCarrito(id){ //elimina un producto del carrito
         const indice = carrito.indexOf(item)
         carrito.splice(indice, 1)
     }
-    mensajeToastify(item.nombre,"eliminó")
+    mensajeToastify(`¡Se eliminó 1 ${item.nombre} del carrito!`)
     localStorage.setItem("carrito",JSON.stringify(carrito))
     renderCarrito()
     renderTotal()
@@ -130,10 +130,9 @@ function renderCarrito () { //muestra los productos que el cliente ha agregado a
     
  })
 
-const mensajeToastify= (nombre,mensaje)=>{  //mensaje cuando agrega o elimina un producto del carrito
-    let pronombre= mensaje==="eliminó" ? "del" : "al"
+ const mensajeToastify= (mensaje)=>{
     Toastify({
-        text: `¡Se ${mensaje} 1 ${nombre} ${pronombre} carrito!`,
+        text: `${mensaje}`,
         duration: 3000,
         gravity: 'bottom',
         position: 'left',
@@ -142,6 +141,7 @@ const mensajeToastify= (nombre,mensaje)=>{  //mensaje cuando agrega o elimina un
           }
     }).showToast()
 }
+
 const mensajeCarroVacio= () =>{ // mensaje cuando el carrito está vacío 
     Swal.fire({
         customClass: {
@@ -155,5 +155,8 @@ const mensajeCarroVacio= () =>{ // mensaje cuando el carrito está vacío
     renderCarrito()
     renderTotal()
     renderCantidad()
+
+
+
 
 

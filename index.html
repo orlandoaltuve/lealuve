@@ -26,13 +26,12 @@
     <script defer src="./javascript/modal.js"></script>
     <script defer src="./javascript/app.js"></script>
     <script defer src="./javascript/index.js"></script>
-    
+
 </head>
 
 <body class="body">
     <header class="header">
-        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span
-            id="contadorCarrito">0</span></button>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><img src="multimedia/logo.png" alt="Logo" class="logo"></a>
@@ -60,14 +59,14 @@
                         </li>
 
                     </ul>
-            
-                    
+
+
                 </div>
 
             </div>
-            
+
         </nav>
-        
+
     </header>
 
     <main class="main">
@@ -98,11 +97,11 @@
 
         </div>
 
-        <form class="newsletter ">
-            <h3 class="animate__animated animate__pulse animate__infinite">Suscribete a nuestra newsletter</h3>
+        <form id="formNewsletter" class="newsletter ">
+            <h3 id="tituloNews" class="animate__animated animate__pulse animate__infinite">Suscribete a nuestra newsletter</h3>
             <label for="email"></label>
-            <input type="email" placeholder="Ingrese su email" name="email" required>
-            <button class="boton-principal">
+            <input type="email" id="emailNewsletter" placeholder="Ingrese su email" name="email" required>
+            <button id="btnNews" type="submit" class="boton-principal">
                 Enviar
             </button>
         </form>
@@ -122,10 +121,10 @@
             <div class="botones-modal">
                 <button id="vaciar-carrito" class="boton-vaciarCarrito">Vaciar Carrito</button>
                 <button id="iniciar-compra" class="boton-iniciarCompra">Iniciar Compra</button>
-                
+
             </div>
-            
-            
+
+
         </div>
     </div>
 
@@ -159,6 +158,10 @@
         crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('ZaUdSTZHEaVUesqBk')
+    </script>
 </body>
 
 </html>
